@@ -1,0 +1,38 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: rgb(252,149,44);
+    background: linear-gradient(120deg, rgba(252,149,44,1) 26%, rgba(247,213,54,1) 100%);
+}
+
+
+
+.barcontent {
+    margin-left: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blanchedalmond;
+    min-width: 350px;
+    max-width: 33%;
+    margin: auto;
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+
+.list {
+    list-style: none;
+}
+
+.completed {
+        text-decoration: line-through;
+    }

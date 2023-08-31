@@ -1,0 +1,27 @@
+<%- include ("partials/header.ejs")%>
+
+
+    <div class="box">
+     <h1><%= new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'long', day: '2-digit'}).format(new Date()) %></h1>
+       <form action="/" method="POST">
+            <ul class="list" >
+            <% todos.forEach(todo => { %>
+                <li>
+                    <input type="checkbox" name="todoItem" value="<%= todo.id %>" <%= todo.completed ? 'checked' : '' %> onchange="toggleCompleted(<%= todo.id %>)">
+                    <span id="task_<%= todo.id %>" class="<%= todo.completed ? 'completed' : '' %>"><%= todo.task %></span>
+                </li>
+            <% }); %>
+            </ul>
+            <input type="text" name="newTodo" placeholder="Neue Aufgabe eingeben" required>
+            <button class="add_button" type="submit">Hinzufügen</button>
+        </form> 
+    </div>
+
+    <script>
+        function toggleCompleted(todoId) {
+            const taskElement = document.getElementById(`task_${todoId}`);
+            taskElement.classList.toggle('completed');
+        }
+    </script>
+
+

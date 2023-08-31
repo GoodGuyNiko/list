@@ -1,0 +1,25 @@
+<%- include ("partials/header.ejs")%>
+
+
+    <div class="box">
+     <h1>Work</h1>
+       <form action="/work" method="POST">
+            <ul class="list" >
+            <% todosWork.forEach(todoWork => { %>
+                <li>
+                    <input type="checkbox" name="todoItem" value="<%= todoWork.id %>" <%= todoWork.completed ? 'checked' : '' %> onchange="toggleCompleted(<%= todoWork.id %>)">
+                    <span id="task_<%= todoWork.id %>" class="<%= todoWork.completed ? 'completed' : '' %>"><%= todoWork.task %></span>
+                </li>
+            <% }); %>
+            </ul>
+            <input type="text" name="newTodoWork" placeholder="Neue Aufgabe eingeben" required>
+            <button class="add_button" type="submit">Hinzufügen</button>
+        </form> 
+    </div>
+
+    <script>
+        function toggleCompleted(todoIdWork) {
+            const taskElement = document.getElementById(`task_${todoIdWork}`);
+            taskElement.classList.toggle('completed');
+        }
+    </script>
