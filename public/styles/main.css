@@ -8,13 +8,23 @@ body {
     background: linear-gradient(120deg, rgba(252,149,44,1) 26%, rgba(247,213,54,1) 100%);
 }
 
-
+.navbar {
+    background-color: orange;
+    height: 5vh;
+}
 
 .barcontent {
-    margin-left: 5px;
+    margin-top: 3%;
+    margin-left: 3%;
     text-decoration: none;
     color: black;
-    font-size: 1.5rem;
+    font-size: 2vh;
+    background-color: rgb(255, 213, 97);
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 10%;
 }
 
 .box {
