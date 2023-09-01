@@ -25,6 +25,8 @@ body {
     padding-right: 0.5rem;
     padding-bottom: 0.5rem;
     border-radius: 10%;
+    font-family: 'Courier Prime', monospace;
+
 }
 
 .box {
@@ -41,6 +43,8 @@ body {
 
 .list {
     list-style: none;
+    font-family: 'Courier Prime', monospace;
+
 }
 
 .completed {
